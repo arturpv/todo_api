@@ -11,6 +11,7 @@ Spring Web
 Spring Data JPA (presumido)
 
 📋 Pré-requisitos
+
 Antes de começar, certifique-se de ter instalado:
 
 Java JDK 17 ou superior
@@ -35,6 +36,7 @@ Git
 A API estará disponível em: http://localhost:8080
 
 📚 Endpoints
+
 Criar Tarefa
 
 POST /tarefas
@@ -45,17 +47,21 @@ Content-Type: application/json
 }
 
 Exemplo com curl:
+
 curl -X POST http://localhost:8080/tarefas \
   -H "Content-Type: application/json" \
   -d '{"descricao":"Estudar Java"}'
 
 Listar Todas as Tarefas
+
 GET /tarefas
 
 Exemplo com curl:
+
 curl http://localhost:8080/tarefas
 
 Atualizar Tarefa
+
 PUT /tarefas/{id}
 Content-Type: application/json
 
@@ -65,15 +71,18 @@ Content-Type: application/json
 }
 
 Exemplo com curl:
+
 curl -X PUT http://localhost:8080/tarefas/1 \
   -H "Content-Type: application/json" \
   -d '{"descricao":"Estudar Spring Boot","concluida":true}'
 
 
 Deletar Tarefa
+
 DELETE /tarefas/{id}
 
 Exemplo com curl:
+
 curl -X DELETE http://localhost:8080/tarefas/1
 
 
